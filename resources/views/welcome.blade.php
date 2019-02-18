@@ -17,6 +17,18 @@
         <link rel="stylesheet" href="{{ asset('public/frontend/css/pricing.css') }}">
         <link rel="stylesheet" href="{{ asset('public/frontend/css/main.css') }}">
 
+        <style>
+            @foreach($slides as $key=>$slide)
+            .owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child({{ $key+1 }}) .item
+            {
+                background: url({{ asset('public/uploads/slide/'.$slide->image) }});
+                background-size: cover;
+                background-position: bottom;
+            }
+            @endforeach
+
+        </style>
+
 
         <script src="{{ asset('public/frontend/js/jquery-1.11.2.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('public/frontend/js/jquery.flexslider.min.js') }}"></script>
@@ -90,30 +102,16 @@
 
         <!--== 5. Header ==-->
         <section id="header-slider" class="owl-carousel">
+            @foreach($slides as $key=>$slide)
             <div class="item">
                 <div class="container">
                     <div class="header-content">
-                        <h1 class="header-title">BEST FOOD</h1>
-                        <p class="header-sub-title">create your own slogan</p>
+                        <h1 class="header-title" style="color: #fff;">{{ $slide->title }}</h1>
+                        <p class="header-sub-title" style="color: #fff;">{{ $slide->sub_title }}</p>
                     </div> <!-- /.header-content -->
                 </div>
             </div>
-            <div class="item">
-                <div class="container">
-                    <div class="header-content">
-                        <h1 class="header-title">BEST SNACKS</h1>
-                        <p class="header-sub-title">create your own slogan</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
-            <div class="item">
-                <div class="container">
-                    <div class="header-content text-right pull-right">
-                        <h1 class="header-title">BEST DRINKS</h1>
-                        <p class="header-sub-title">create your own slogan</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
+            @endforeach
         </section>
 
 

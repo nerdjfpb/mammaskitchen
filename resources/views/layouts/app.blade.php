@@ -24,6 +24,10 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('public/backend/demo/demo.css')}}" rel="stylesheet" />
 
+    @stack('styles')
+
+
+
 </head>
 <body>
 
@@ -274,5 +278,8 @@
 
         });
       </script>
+
+       @stack('scripts')
+
 </body>
 </html>
