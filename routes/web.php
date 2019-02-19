@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@index')->name('welcome');
 Route::post('/reservation','ReservationController@reserve')->name('reserve');
+Route::post('/contact','ContactController@send')->name('contact');
 
 Auth::routes();
 
@@ -24,5 +25,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'],funct
     Route::get('reservation','ReservationController@index')->name('reservation.index');
     Route::post('reservation/{id}','ReservationController@status')->name('reservation.status');
     Route::delete('reservation/{id}','ReservationController@destroy')->name('reservation.destroy');
+    Route::get('contact','ContactController@index')->name('contact.index');
+    Route::get('contact/{id}','ContactController@show')->name('contact.show');
+    Route::delete('contact/{id}','ContactController@destroy')->name('contact.destroy');
+
 
 });
