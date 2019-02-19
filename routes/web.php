@@ -19,4 +19,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'],funct
     Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
     Route::resource('slide','SlideController');
     Route::resource('category','CategoryController');
+    Route::resource('item','ItemController');
+
 });
