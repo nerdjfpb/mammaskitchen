@@ -35,6 +35,12 @@
               <p>Items</p>
             </a>
           </li>
+          <li class="{{ Request::is('admin/reservation') ? 'active': '' }}">
+            <a class="nav-link" href={{ route('reservation.index') }}>
+              <i class="material-icons">bubble_chart</i>
+              <p>Reservation</p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="./typography.html">
               <i class="material-icons">library_books</i>
