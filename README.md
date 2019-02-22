@@ -5,7 +5,7 @@ Restaurant related laravel 5.7.22 website...
 
 ## Live Link
 
-* [Mammas Kitchen](https://nerdjfpb.com/projects/laravel/mammaskitchen/) - Anime world
+* [Mammas Kitchen](https://nerdjfpb.com/projects/laravel/mammaskitchen/) - Mamma's Kitchen
 
 
 ## Feature List
